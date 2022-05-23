@@ -5,42 +5,135 @@
     <title>HTML Academy: Седона</title>
   </head>
   <body>
-    <clas class="header">
-      <input class="header_nav">
-        <a href="index.html">
-          <img src="" alt="Sedona's logo">
-        </a>
-        <ul class="nav_menu_list">
-          <li>
-            <a href="index.html" class="current_page">Главная</a>>
-          </li>
-          <li>
-            <a href="#">О Седоне</a>>
-          </li>
-          <li>
-            <a href="hotels.html">Гостиницы</a>
-          </li>
-        </ul>
-        <section class="nav_custom_menu_list"><!--Стоит ли выделять поиск и 2 кнопки в отледбный контейнер?-->
-          <input type="search"> <!--Доработать окно поиска, там форма!!!-->
-          <button class="likes_button" type="">
-            <img src="#" alt="likes icon">
-          </button><!--Доработать окно поиска, там кнопка с лайками!!!-->
-          <button class="wanna-here_button" type="">
-            <img src="#" alt="Button 'I want here'">
-          </button>
-        </section>
-      </nav>
+      <header class="header">
+        <nav class="header_nav">
+          <a href="index.html">
+            <img src="" alt="Лого Седоны">
+          </a>
+          <ul class="nav_menu_list">
+            <li class="nav_menu_item">
+              <a href="index.html" class="current_page">Главная</a>
+            </li>
+            <li class="nav_menu_item">
+              <a href="#">О Седоне</a>
+            </li>
+            <li class="nav_menu_item">
+              <a href="hotels.html">Гостиницы</a>
+            </li>
+          </ul>
+          <ul class="nav_menu_custom_list">
+            <li class="nav_menu_item">
+              <a href="index.html" class="current_page">Поиск</a> <!--поиск делать как опычное поле поиска "input" или оставить как ссылку? Нужно ли его скрывать?-->
+            </li>
+            <li class="nav_menu_item">
+              <a href="#">Избранное</a> <!-- избранное размечаем как ссылку, как обозначить счётчик?-->
+            </ul>
+              <button class="nav_menu_item" type="button">
+                Хочу сюда
+              </button>   <!--Стоит ли делать как отдельнную кнопку?-->
+        </nav>
+      </header>
       <main class="main">
-
+        <h1 class="visually-hidden">Город Седона</h1>
+        <img src="" alt="Фото пейзажа города 'Добро пожаловать в Седону'">  <!--как лучше обозначить этот блок/ изображение и его описание?-->
+         <h2>Седона — небольшой городок в Аризоне, заслуживающий большего!</h2>
+          <p>Рассмотрим 5 причин, по которым Седона круче, чем Гранд-Каньон!</p>
+          <dl class="advantages_list"> <!--список определений ок или лучше обычный?-->
+              <div>
+                <dt class="advantages_item_1">
+                  Настоящий городок <!--Нужно ли оборачивать в спан или можно оставить?-->
+                </dt>
+                <dd class="advantages_item_1">
+                  <span>— №1 —</span>
+                  <span>Седона — не аттракцион для туристов, там течёт своя жизнь</span>
+                  <img src="" alt="Фото города">
+                </dd>
+              </div>
+              <div>
+                <dt class="advantages_item">
+                  <img src="" alt="Иконка домик">
+                  <span>Жильё</span>
+                </dt>
+                <dd class="advantages_item">
+                  Рекомендуем пожить в настоящем мотеле, всё как в кино! <!--//?-->
+                </dd>
+              </div>
+              <div>
+                <dt class="advantages_item">
+                  <img src="" alt="Иконка еда">
+                  <span>Еда</span>
+                </dt>
+                <dd class="advantages_item">
+                  Всегда заказывайте топовый фирменный бургер, вы не разочаруетесь! <!--//?-->
+                </dd>
+              </div>
+              <div>
+                <dt class="advantages_item">
+                  <img src="" alt="Иконка подарок">
+                  <span>Сувениры</span>
+                </dt>
+                <dd class="advantages_item">
+                  Не только китайского, но и настоящего местного производства! <!--//?-->
+                </dd>
+              </div>
+              <div>
+                <dt class="advantages_item_2">
+                  Там есть мост дьявола <!--//?-->
+                </dt>
+                <dd class="advantages_item_2">
+                  <span>— №2 —</span>
+                  <span>Да, по нему можно пройти! Если вы осмелитесь, разумеется</span>
+                  <img src="" alt="Фото моста">
+                </dd>
+              </div>
+              <div>
+                <dt class="advantages_item_3">
+                  Небольшая площадь<!--//?-->
+                </dt>
+                <dd class="advantages_item_3">
+                  <span>— №3 —</span>
+                  <span>Все достопримечательности находятся очень близко</span>
+                </dd>
+              </div>
+              <div>
+                <dt class="advantages_item_4">
+                  Красивая дорога<!--//?-->
+                </dt>
+                <dd class="advantages_item_4">
+                  <span>— №4 —</span>
+                  <span>Ехать в Седону из Лас-Вегаса совсем не скучно!</span>
+                </dd>
+              </div>
+              <div>
+                <dt class="advantages_item_5">
+                  Мало туристов<!--//?-->
+                </dt>
+                <dd class="advantages_item_5">
+                  <span>— №5 —</span>
+                  <span>Большинство едет в Гранд Каньон и толпится там</span>
+                </dd>
+              </div>
+          </dl>
+          <section>
+            <h2>Заинтересовались?</h2>
+            <p>Укажите предполагаемые даты поездки, и мы покажем вам лучшие предложения гостиниц в Седоне</p>
+            <a href="" class="button">  <!--форма!!!-->
+              ПОИСК ГОСТИНИЦЫ В седоне
+            </a>
+          </section>
+          <section>
+            <h2>Подпишитесь на рассылку</h2>
+            <p>Только полезная информация и никакого спама, честное бойскаутское!</p>
+            <form action="https://echo.htmlacademy.ru/" method="post" class="subscription"> <!--нужно ли оборачивать в форму?-->
+              <input type="email" value="Ваш email" placeholder="моя@почта">
+              <input type="submit" class="button" value="Подписаться">
+            </form>
+          </section>
       </main>
-    </header>
+
   </body>
 </html>
 
 <!--Вопросы:
-- поиск делать как опычное поле поиска "input" или как форму "Поиск гостиницы в Седоне"?
-- лайки можно сделать обычной кнопкой? если да, то размечаем ли место для счётчика?
-- кнопка "Хочу сюда!" это просто кнопка или она открывает форму "Поиск гостиницы в Седоне"?
 
 -->
