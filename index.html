@@ -39,9 +39,9 @@
          <h2>Седона — небольшой городок в Аризоне, заслуживающий большего!</h2>
           <p>Рассмотрим 5 причин, по которым Седона круче, чем Гранд-Каньон!</p>
           <dl class="advantages_list"> <!--список определений ок или лучше обычный?-->
-              <div>
+              <div class="advantages_block-1">
                 <dt class="advantages_item_1">
-                  Настоящий городок <!--Нужно ли оборачивать в спан или можно оставить?-->
+                  <span>Настоящий городок </span>
                 </dt>
                 <dd class="advantages_item_1">
                   <span>— №1 —</span>
@@ -49,36 +49,36 @@
                   <img src="" alt="Фото города">
                 </dd>
               </div>
-              <div>
+              <div class="advantages_block">
                 <dt class="advantages_item">
                   <img src="" alt="Иконка домик">
                   <span>Жильё</span>
                 </dt>
                 <dd class="advantages_item">
-                  Рекомендуем пожить в настоящем мотеле, всё как в кино! <!--//?-->
+                  <span>Рекомендуем пожить в настоящем мотеле, всё как в кино! </span>
                 </dd>
               </div>
-              <div>
+              <div class="advantages_block">
                 <dt class="advantages_item">
                   <img src="" alt="Иконка еда">
                   <span>Еда</span>
                 </dt>
                 <dd class="advantages_item">
-                  Всегда заказывайте топовый фирменный бургер, вы не разочаруетесь! <!--//?-->
+                  <span>Всегда заказывайте топовый фирменный бургер, вы не разочаруетесь!</span>
                 </dd>
               </div>
-              <div>
+              <div class="advantages_block">
                 <dt class="advantages_item">
                   <img src="" alt="Иконка подарок">
                   <span>Сувениры</span>
                 </dt>
                 <dd class="advantages_item">
-                  Не только китайского, но и настоящего местного производства! <!--//?-->
+                  <span>Не только китайского, но и настоящего местного производства!</span>
                 </dd>
               </div>
-              <div>
+              <div class="advantages_block-2">
                 <dt class="advantages_item_2">
-                  Там есть мост дьявола <!--//?-->
+                  <span>Там есть мост дьявола </span>
                 </dt>
                 <dd class="advantages_item_2">
                   <span>— №2 —</span>
@@ -86,27 +86,27 @@
                   <img src="" alt="Фото моста">
                 </dd>
               </div>
-              <div>
+              <div class="advantages_block-3">
                 <dt class="advantages_item_3">
-                  Небольшая площадь<!--//?-->
+                  <span>Небольшая площадь</span>
                 </dt>
                 <dd class="advantages_item_3">
                   <span>— №3 —</span>
                   <span>Все достопримечательности находятся очень близко</span>
                 </dd>
               </div>
-              <div>
+              <div class="advantages_block-4">
                 <dt class="advantages_item_4">
-                  Красивая дорога<!--//?-->
+                  <span>Красивая дорога</span>
                 </dt>
                 <dd class="advantages_item_4">
                   <span>— №4 —</span>
                   <span>Ехать в Седону из Лас-Вегаса совсем не скучно!</span>
                 </dd>
               </div>
-              <div>
+              <div class="advantages_block-5">
                 <dt class="advantages_item_5">
-                  Мало туристов<!--//?-->
+                  <span>Мало туристов</span>
                 </dt>
                 <dd class="advantages_item_5">
                   <span>— №5 —</span>
@@ -114,23 +114,43 @@
                 </dd>
               </div>
           </dl>
-          <section>
+          <section class="interested">
             <h2>Заинтересовались?</h2>
             <p>Укажите предполагаемые даты поездки, и мы покажем вам лучшие предложения гостиниц в Седоне</p>
             <a href="" class="button">  <!--форма!!!-->
               ПОИСК ГОСТИНИЦЫ В седоне
             </a>
           </section>
-          <section>
-            <h2>Подпишитесь на рассылку</h2>
-            <p>Только полезная информация и никакого спама, честное бойскаутское!</p>
-            <form action="https://echo.htmlacademy.ru/" method="post" class="subscription"> <!--нужно ли оборачивать в форму?-->
-              <input type="email" value="Ваш email" placeholder="моя@почта">
-              <input type="submit" class="button" value="Подписаться">
-            </form>
-          </section>
       </main>
-
+      <footer>
+        <section class="subscription_block"> <!--Можно ли блок подписки тоже закинуть в футер?-->
+          <h2>Подпишитесь на рассылку</h2>
+          <p>Только полезная информация и никакого спама, честное бойскаутское!</p>
+          <form action="https://echo.htmlacademy.ru/" method="post" class="subscription"> <!--нужно ли оборачивать в форму?-->
+            <input type="email" value="Ваш email" placeholder="моя@почта" required>
+            <input type="submit" class="button" value="Подписаться"> <!--как лучше через input или button?-->
+          </form>
+        </section>
+        <ul class="footer_social_list">
+          <li class="footer_social_item">
+            <a href="#" class="button">
+              <span class="visually-hidden">ВКонтакте</span>
+            </a>
+          </li>
+          <li class="footer_social_item">
+            <a href="#" class="button">
+              <span class="visually-hidden">Телеграм</span>
+            </a>
+          </li>
+          <li class="footer_social_item">
+            <a href="#" class="button">
+              <span class="visually-hidden">Ютуб</span>
+            </a>
+          </li>
+        </ul>
+        <span class="phone">+7 (812) 812-12-12</span>
+        <img src="" alt="лого htmlacademy">
+      </footer>
   </body>
 </html>
 
