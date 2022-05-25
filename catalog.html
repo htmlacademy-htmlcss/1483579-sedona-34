@@ -48,9 +48,7 @@
           </a>
         </li>
         <li class="breadcrumbs_item">
-          <a class="breadcrumbs_link" href="index.html">
-            Гостиницы
-          </a>
+          <a class="breadcrumbs_link" href="index.html">Гостиницы</a>
         </li>
       </ul>
       <section class=""> <!--нужно ли выделять в отдельный блок форму или лучше вместе с заголовком? -->
@@ -77,6 +75,7 @@
                   Wi-Fi
                 </label>
               </li>
+            </ul>
           </fieldset>
           <fieldset>
             <legend>Тип жилья:</legend>
@@ -105,11 +104,11 @@
             <legend>Стоимость, ₽:</legend> <!--Скорректировать!-->
             <label>
               <span>от</span>
-              <input class="cost_filter" type="number" value="0">
+              <input class="cost_filter" type="number" value="0" name="min_cost">
             </label>
             <label>
               <span>до</span>
-              <input class="cost_filter" type="number" value="9000">
+              <input class="cost_filter" type="number" value="9000" name="max_cost">
             </label>
             <!--Ползунок-->
           </fieldset>
@@ -203,7 +202,7 @@
           <a class="pagination_link" href="#">4</a>
         </li>
         <li class="pagination_item">
-          <a class="pagination_link" href="#">
+          <a class="pagination_link" href="#">...
             <span class="visualy_hidden">Следующая страница</span>
           </a>
         </li>
@@ -224,9 +223,9 @@
       <section class="subscription_block">
         <h2>Подпишитесь на рассылку</h2>
         <p>Только полезная информация и никакого спама, честное бойскаутское!</p>
-        <form action="https://echo.htmlacademy.ru/" method="post" class="subscription">
-          <input type="email" value="Ваш email" placeholder="моя@почта" required>
-          <input class="button" type="submit" value="Подписаться">
+        <form class="subscription" action="https://echo.htmlacademy.ru/" method="post" >
+          <input type="email" value="Ваш email" placeholder="моя@почта" name="subscription_email" required>
+          <input class="button" type="submit" value="Подписаться" name="subscription_button">
         </form>
       </section>
       <ul class="footer_social_list">
