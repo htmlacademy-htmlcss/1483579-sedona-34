@@ -35,89 +35,91 @@
             </a>
             <span class="counter">12</span>
           </li>
-          <li class="nav_menu_item">
-            <a class="button" href="#">Хочу сюда</a>
+          <li class="nav_menu_item button">
+            <a class="broun_button" href="#">Хочу сюда</a>
           </li>
         </ul>
       </nav>
     </header>
     <main class="catalog_main">
-      <h1>Гостиницы Седоны</h1> <!--Стоит ли выделять в хедер отдельно весь блок с фильтрами?-->
-      <ol class="breadcrumbs">
-        <li class="breadcrumbs_item">
-          <a class="breadcrumbs_link" href="index.html">
-            <span class="visually-hidden">Главная</span>
-          </a>
-        </li>
-        <li class="breadcrumbs_item">
-          <a class="breadcrumbs_link" href="index.html">Гостиницы</a>
-        </li>
-      </ol>
-      <section class=""> <!--нужно ли выделять в отдельный блок форму или лучше вместе с заголовком? -->
-        <h2 class="visually-hidden">Список фильтров</h2>
-        <form class="catalog_filters" action="https://echo.htmlacademy.ru/" method="get">
-          <fieldset>
-            <legend>Инфраструктура:</legend>
-            <ul class="catalog_filter_list">
-              <li class="catalog_filter_item">
-                <label class="control">
-                  <input class="control_input" type="checkbox" name="pool" checked>
-                  Бассейн
-                </label>
-              </li>
-              <li class="catalog_filter_item">
-                <label class="control">
-                  <input class="control_input" type="checkbox" name="parking" checked>
-                  Парковка
-                </label>
-              </li>
-              <li class="catalog_filter_item">
-                <label class="control">
-                  <input class="control_input" type="checkbox" name="wifi">
-                  Wi-Fi
-                </label>
-              </li>
-            </ul>
-          </fieldset>
-          <fieldset>
-            <legend>Тип жилья:</legend>
+      <div class="catalog_main_header">
+        <h1>Гостиницы Седоны</h1>
+        <ol class="breadcrumbs">
+          <li class="breadcrumbs_item">
+            <a class="breadcrumbs_link" href="index.html">
+              <span class="visually-hidden">Главная</span>
+            </a>
+          </li>
+          <li class="breadcrumbs_item">
+            <a class="breadcrumbs_link" href="index.html">Гостиницы</a>
+          </li>
+        </ol>
+        <section>
+          <h2 class="visually-hidden">Список фильтров</h2>
+          <form class="catalog_filters" action="https://echo.htmlacademy.ru/" method="get">
+            <fieldset>
+              <legend>Инфраструктура:</legend>
               <ul class="catalog_filter_list">
                 <li class="catalog_filter_item">
                   <label class="control">
-                    <input class="control_input" type="radio" name="type_of_housing" value="hotel" checked>
-                    Гостиница
+                    <input class="control_input" type="checkbox" name="pool" checked>
+                    Бассейн
                   </label>
                 </li>
                 <li class="catalog_filter_item">
                   <label class="control">
-                    <input class="control_input" type="radio" name="type_of_housing" value="motel">
-                    Мотель
+                    <input class="control_input" type="checkbox" name="parking" checked>
+                    Парковка
                   </label>
                 </li>
                 <li class="catalog_filter_item">
                   <label class="control">
-                    <input class="control_input" type="radio" name="type_of_housing" value="apartments">
-                    Апартаменты
+                    <input class="control_input" type="checkbox" name="wifi">
+                    Wi-Fi
                   </label>
                 </li>
               </ul>
-          </fieldset>
-          <fieldset>
-            <legend>Стоимость, ₽:</legend> <!--Скорректировать!-->
-            <label>
-              <span>от</span>
-              <input class="cost_filter" type="number" value="0" name="min_cost">
-            </label>
-            <label>
-              <span>до</span>
-              <input class="cost_filter" type="number" value="9000" name="max_cost">
-            </label>
-            <!--Ползунок-->
-          </fieldset>
-          <button class="buttom" type="submit" value="Применить">Применить</button>
-          <button class="reset_button" type="reset" value="Сбросить">Сбросить</button> <!--Уточить!!! Прописать отдельный класс?-->
-        </form>
-      </section>
+            </fieldset>
+            <fieldset>
+              <legend>Тип жилья:</legend>
+                <ul class="catalog_filter_list">
+                  <li class="catalog_filter_item">
+                    <label class="control">
+                      <input class="control_input" type="radio" name="type_of_housing" value="hotel" checked>
+                      Гостиница
+                    </label>
+                  </li>
+                  <li class="catalog_filter_item">
+                    <label class="control">
+                      <input class="control_input" type="radio" name="type_of_housing" value="motel">
+                      Мотель
+                    </label>
+                  </li>
+                  <li class="catalog_filter_item">
+                    <label class="control">
+                      <input class="control_input" type="radio" name="type_of_housing" value="apartments">
+                      Апартаменты
+                    </label>
+                  </li>
+                </ul>
+            </fieldset>
+            <fieldset>
+              <legend>Стоимость, ₽:</legend> <!--Скорректировать!-->
+              <label>
+                <span>от</span>
+                <input class="cost_filter" type="number" value="0" name="min_cost">
+              </label>
+              <label>
+                <span>до</span>
+                <input class="cost_filter" type="number" value="9000" name="max_cost">
+              </label>
+              <!--Ползунок-->
+            </fieldset>
+            <button class="button blue_button" type="submit" value="Применить">Применить</button>
+            <button class="button reset_button" type="reset" value="Сбросить">Сбросить</button> <!--Уточить!!! Прописать отдельный класс?-->
+          </form>
+        </section>
+      </div>
       <h2>Найдено гостиниц: 38</h2>
       <select class="select_control" aria-label="Сортировка">
         <option value="cheap">Сначала дешёвые</option>
@@ -140,40 +142,40 @@
         </a>
         <span>Гостиница</span>
         <span class="hotel_card_price">От 4000 ₽</span>
-        <a class="button" href="#">Подробнее</a>
-        <a class="button button_favorite" href="#">Избранное</a>
+        <a class="button broun_button" href="#">Подробнее</a>
+        <a class="button blue_button" href="#">Избранное</a>
         <div class="stars">
           <span class="four_star">4 звезды</span>
         </div>
-        <span>Рейтинг: 8,5</span>
+        <span class="rating">Рейтинг: 8,5</span>
       </div>
       <div class="hotel_card">
         <a class="hotels_card_link" href="#">
           <h3>Villas at Poco Diablo</h3>
-          <img src="images/catalog-context/villas-optimized.jpg" width="300px" height="211px" alt="Villas at Poco Diablo.">
+          <img src="images/catalog-context/villas-optimazed.jpg" width="300px" height="211px" alt="Villas at Poco Diablo.">
         </a>
         <span>Гостиница</span>
         <span class="hotel_card_price">От 5000 ₽</span>
-        <a class="button" href="#">Подробнее</a>
-        <a class="button button_favorite_checked" href="#">Избранное</a>
+        <a class="button broun_button" href="#">Подробнее</a>
+        <a class="button button_favorite" href="#">Избранное</a>
         <div class="stars">
           <span class="four_star">4 звезды</span>
         </div>
-        <span>Рейтинг: 9,2</span>
+        <span class="rating">Рейтинг: 9,2</span>
       </div>
       <div class="hotel_card">
         <a class="hotels_card_link" href="#">
           <h3>Desert Quail Inn</h3>
-          <img src="images/catalog-context/desert-optimized.jpg" width="300px" height="211px" alt="Desert Quail Inn.">
+          <img src="images/catalog-context/desert-optimazed.jpg" width="300px" height="211px" alt="Desert Quail Inn.">
         </a>
         <span>Гостиница</span>
         <span class="hotel_card_price">От 2500 ₽</span>
-        <a class="button" href="#">Подробнее</a>
-        <a class="button button_favorite" href="#">Избранное</a>
+        <a class="button broun_button" href="#">Подробнее</a>
+        <a class="button blue_button" href="#">Избранное</a>
         <div class="stars">
           <span class="three_star">3 звезды</span>
         </div>
-        <span>Рейтинг: 6,9</span>
+        <span class="rating">Рейтинг: 6,9</span>
       </div>
       <div class="hotel_card">
         <a class="hotels_card_link" href="#">
@@ -182,12 +184,12 @@
         </a>
         <span>Гостиница</span>
         <span class="hotel_card_price">От 1500 ₽</span>
-        <a class="button" href="#">Подробнее</a>
-        <a class="button button_favorite" href="#">Избранное</a>
+        <a class="button broun_button" href="#">Подробнее</a>
+        <a class="button blue_button" href="#">Избранное</a>
         <div class="stars">
           <span class="two_star">2 звезды</span>
         </div>
-        <span>Рейтинг: 5,0</span>
+        <span class="rating">Рейтинг: 5,0</span>
       </div>
       <ul class="paggination">
         <li class="pagination_item">
@@ -221,12 +223,12 @@
       </label>
     </main>
     <footer>
-      <section class="subscription_block">
+      <section class="  ">
         <h2>Подпишитесь на рассылку</h2>
         <p>Только полезная информация и никакого спама, честное бойскаутское!</p>
         <form class="subscription" action="https://echo.htmlacademy.ru/"   method="post" >
-          <input type="email" value="Ваш email" placeholder="моя@почта" name="subscription_email" required>
-          <input class="button" type="submit" value="Подписаться" name="subscription_button">
+          <input class="email" type="email" value="Ваш email" placeholder="моя@почта" name="subscription_email" required>
+          <input class="button blue_big_button" type="submit" value="Подписаться" name="subscription_button">
         </form>
       </section>
       <ul class="footer_social_list">
