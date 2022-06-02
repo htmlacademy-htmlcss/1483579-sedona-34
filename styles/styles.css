@@ -1,0 +1,220 @@
+@font-face {
+  font-family: "PT Sans";
+  font-style: normal;
+  font-weight: 400;
+
+  src: url("../fonts/ptsans-400.woff2") format("woff2");
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "PT Sans";
+  font-style: normal;
+  font-weight: 400;
+
+  src: url("../fonts/ptsans-700.woff2") format("woff2");
+  font-display: swap;
+}
+
+body {
+  font-family: "PT Sans", Arial, sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 21px;
+  color: rgb(0, 0, 0);
+
+  width: 1200px;
+  margin-right: auto;
+  margin-left: auto;
+  background-color: rgb(255, 255, 255);
+}
+
+h1 {
+font-size: 60px;
+font-weight: 700;
+line-height: 78px;
+text-align: left;
+}
+
+a {
+  text-decoration: none;
+}
+
+h2{
+  font-size: 30px;
+  font-weight: 700;
+  line-height: 36px;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+p {
+  font-size: 22px;
+  font-weight: 400;
+  line-height: 26px;
+  text-align: center;
+}
+
+h3 {
+  font-size: 24px;
+  font-weight: 700;
+  line-height: 28px;
+  text-align: center;
+}
+
+span {
+  font-weight: 400;
+  line-height: 21px;
+  text-align: center;
+}
+
+legend {
+  font-size: 20px;
+  font-weight: 700;
+  line-height: 26px;
+  text-align: left;
+}
+
+/*option {
+font-size: inherit;
+} - не наследует*/
+
+/*address {
+  font-size: 40px;
+  font-weight: 400;
+  line-height: 40px;
+  text-align: center;
+  color: inherit;
+}  - не наследует*/
+
+.wrap-mountains {
+  background-color: rgb(130, 179, 211);
+  background-image: url("../images/decorative/index-main-background-ortimized.jpg");
+}
+
+.blue_background {
+  color: rgb(255, 255, 255);
+  background-color: rgb(130, 179, 211);
+}
+
+.light_blue_background {
+  background-color: rgba(131, 179, 211, 0.12);
+}
+
+.beautiful_way{
+  background-color: rgba(131, 179, 211, 0.2);
+}
+
+.subscription_block {
+  color: rgb(255, 255, 255);
+  background-image: url("../images/decorative/subscription-background.png");
+}
+
+.catalog_subscription_block {
+  background-color: rgb(255, 255, 255);
+}
+
+.catalog_main_header {
+  width: inherit;
+  height: auto; /*изменить по изображеию*/
+  background-repeat: no-repeat;
+  background-color: rgb(130, 179, 211);
+  background-image: url("../images/decorative/catalog-background.jpg");
+
+  color: rgb(255, 255, 255);
+}
+
+.nav_menu_item a {
+  font-size: 20px;
+  font-weight: 700;
+  line-height: 26px;
+  text-align: left;
+
+  color: inherit;
+}
+
+.breadcrumbs_link {
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 21px;
+  text-align: left;
+  color: inherit;
+}
+
+.hotels_card_link {
+  color: inherit;
+}
+
+.rating {
+  background-color: rgba(242, 242, 242);
+  text-transform: uppercase;
+}
+
+.counter {
+  color: rgb(255, 255, 255);
+  background-color: rgba(125, 181, 79, 1);
+}
+
+.pagination_item a {
+  font-size: 20px;
+  font-weight: 700;
+  line-height: 36px;
+  text-align: center;
+
+  background-color: rgba(130, 179, 211, 1);
+  color: rgb(255, 255, 255);
+}
+
+.pagination_link.pagination_current {
+  background-color: rgba(242, 242, 242);
+  color: rgb(0, 0, 0);
+}
+
+input.email {
+  background-color: rgba(242, 242, 242);
+}
+
+.advantages_item h3 {
+  text-transform: uppercase;
+}
+
+.button { /*Основная кнопка*/
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 20px;
+  text-align: center;
+  color: rgb(255, 255, 255);
+  text-transform: uppercase;
+}
+
+.broun_button {
+  background-color: rgba(117, 97, 87);
+}
+
+.blue_button {
+  background-color: rgba(130, 179, 211);
+}
+
+.button_favorite {
+  background: rgba(125, 181, 79);
+}
+
+.reset_button{
+  font-size: 16px;
+  font-weight: 400;
+  text-transform: none;
+}
+
+.broun_big_button {
+  font-size: 20px;
+  line-height: 36px;
+  background-color: rgba(117, 97, 87);
+}
+
+.blue_big_button {
+font-size: 20px;
+line-height: 36px;
+background-color: rgba(130, 179, 211);
+}
+
