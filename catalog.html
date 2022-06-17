@@ -6,48 +6,48 @@
     <link rel="stylesheet" href="styles/styles.css">
   </head>
   <body>
-    <div class="catalog_container">
-      <header>
+    <div class="container">
+      <header class="header">
         <nav class="header_nav">
-          <a href="index.html">
-            <img src="images/logos/header-logo-optimized.jpg" width="139px" height="70px" alt="Лого Седоны.">
+          <a class="header_logo" href="index.html">
+            <img class="header_logo_img" src="images/logos/header-logo.svg" width="139px" height="70px" alt="Лого Седоны.">
           </a>
           <ul class="nav_menu_list">
             <li class="nav_menu_item">
-              <a href="index.html">Главная</a>
+              <a class="current_page" href="index.html">Главная</a>
             </li>
             <li class="nav_menu_item">
               <a href="#">О Седоне</a>
             </li>
             <li class="nav_menu_item">
-              <a class="current_page" href="hotels.html">Гостиницы</a>
+              <a href="catalog.html">Гостиницы</a>
             </li>
           </ul>
-          <ul class="nav_menu_custom_list">
-            <li class="nav_menu_item">
+          <ul class="nav_menu_list nav_menu_custom_list">
+            <li class="nav_menu_item search">
               <a href="#">
-                <span class="visually-hidden">Поиск</span>
+                <span class="visually_hidden">Поиск</span>
               </a>
             </li>
-            <li class="nav_menu_item">
+            <li class="nav_menu_item favorite">
               <a href="#">
-                <span class="visually-hidden">Избранное</span>
+                <span class="visually_hidden">Избранное</span>
               </a>
               <span class="counter">12</span>
             </li>
             <li class="nav_menu_item button">
-              <a class="main_button" href="#">Хочу сюда</a>
+              <a class="button main_button" href="#">Хочу сюда</a>
             </li>
           </ul>
         </nav>
       </header>
-      <main class="catalog_main">
+      <main class="main">
         <div class="catalog_main_header">
-          <h1>Гостиницы Седоны</h1>
+          <h1 class="big_title">Гостиницы Седоны</h1>
           <ol class="breadcrumbs">
             <li class="breadcrumbs_item">
               <a class="breadcrumbs_link" href="index.html">
-                <span class="visually-hidden">Главная</span>
+                <span class="visually_hidden">Главная</span>
               </a>
             </li>
             <li class="breadcrumbs_item">
@@ -55,7 +55,7 @@
             </li>
           </ol>
           <section>
-            <h2 class="visually-hidden">Список фильтров</h2>
+            <h2 class="visually_hidden">Список фильтров</h2>
             <form class="catalog_filters" action="https://echo.htmlacademy.ru/" method="get">
               <fieldset class="infrastructure_filter">
                 <legend>Инфраструктура:</legend>
@@ -129,20 +129,22 @@
             <option value="expensive">Сначала дорогие</option>
             <option value="popular">Сначала популярные</option>
           </select>
-          <a class="catalog_view_button" href="#">
-            <span class="visually-hidden">Показать карточки</span>
-          </a>
-          <a class="catalog_view_button" href="#">
-            <span class="visually-hidden">Показать слайдер</span>
-          </a>
-          <a class="catalog_view_button" href="#">
-            <span class="visually-hidden">Показать список</span>
-          </a>
+          <div class="catalog_view_buttons">
+            <a class="catalog_view_button" href="#">
+              <span class="visually_hidden">Показать карточки</span>
+            </a>
+            <a class="catalog_view_button" href="#">
+              <span class="visually_hidden">Показать слайдер</span>
+            </a>
+            <a class="catalog_view_button" href="#">
+              <span class="visually_hidden">Показать список</span>
+            </a>
+          </div>
         </div>
         <div class="cards_container">
           <div class="hotel_card">
             <a class="hotels_card_link" href="#">
-              <h3>Amara Resort & Spa</h3>
+              <h3 class="middle_titile">Amara Resort & Spa</h3>
               <img class="catalog_img" src="images/catalog-context/amara-optimized.jpg" width="300px" height="211px" alt="Amara Resort & Spa.">
             </a>
             <span>Гостиница</span>
@@ -156,7 +158,7 @@
           </div>
           <div class="hotel_card">
             <a class="hotels_card_link" href="#">
-              <h3>Villas at Poco Diablo</h3>
+              <h3 class="middle_titile">Villas at Poco Diablo</h3>
               <img class="catalog_img" src="images/catalog-context/villas-optimazed.jpg" width="300px" height="211px" alt="Villas at Poco Diablo.">
             </a>
             <span>Гостиница</span>
@@ -170,7 +172,7 @@
           </div>
           <div class="hotel_card">
             <a class="hotels_card_link" href="#">
-              <h3>Desert Quail Inn</h3>
+              <h3 class="middle_titile">Desert Quail Inn</h3>
               <img class="catalog_img" src="images/catalog-context/desert-optimazed.jpg" width="300px" height="211px" alt="Desert Quail Inn.">
             </a>
             <span>Гостиница</span>
@@ -184,7 +186,7 @@
           </div>
           <div class="hotel_card">
             <a class="hotels_card_link" href="#">
-              <h3>GreenTree Inn</h3>
+              <h3 class="middle_titile">GreenTree Inn</h3>
               <img class="catalog_img" src="images/catalog-context/greentree-optimized.jpg" width="300px" height="211px" alt="Фото GreenTree Inn.">
             </a>
             <span>Гостиница</span>
@@ -213,7 +215,7 @@
             </li>
             <li class="pagination_item">
               <a class="pagination_link" href="#">...
-                <span class="visualy_hidden">Следующая страница</span>
+                <span class="visually_hidden">Следующая страница</span>
               </a>
             </li>
             <li class="pagination_item">
@@ -243,17 +245,17 @@
           <ul class="footer_social_list">
             <li class="footer_social_item">
               <a class="social_button" href="#">
-                <span class="visually-hidden">ВКонтакте</span>
+                <span class="visually_hidden">ВКонтакте</span>
               </a>
             </li>
             <li class="footer_social_item">
               <a class="social_button" href="#">
-                <span class="visually-hidden">Телеграм</span>
+                <span class="visually_hidden">Телеграм</span>
               </a>
             </li>
             <li class="footer_social_item">
               <a class="social_button" href="#">
-                <span class="visually-hidden">Ютуб</span>
+                <span class="visually_hidden">Ютуб</span>
               </a>
             </li>
           </ul>
