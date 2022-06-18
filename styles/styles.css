@@ -29,13 +29,10 @@ body {
   font-size: 18px;
   line-height: 21px;
   color: rgb(0, 0, 0);
-
-  margin-left: auto;
-  margin-right: auto;
-  display: flex;
-  flex-direction: column;
-  min-height: 100%;
-  background-color: rgba(255, 255, 255, 1);
+  height: 100%;
+  margin: 0;
+  background-color: rgba(242, 242, 242, 1);
+  ;
 }
 
 h1 {
@@ -43,7 +40,6 @@ h1 {
   font-weight: 700;
   line-height: 78px;
   text-align: left;
-  margin: 0; /*можно ли в глобадьных селлекторах так обнулять?*/
 }
 
 h2{
@@ -98,24 +94,59 @@ legend {
 }
 
 /*ОБЩИЕ СТИЛИ*/
+
+.big_title {
+  margin: 0;
+}
+
+.middle_titile {
+  margin: 0;
+}
+
+.main {
+  flex-grow: 1;
+}
+
 .container {
   width: 1200px;
   margin-left: auto;
   margin-right: auto;
   display: flex;
   flex-direction: column;
-  flex-grow: 1;
   min-height: 100%;
   background-color: rgba(255, 255, 255);
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.2); /*не отображается*/
 }
 
-.visually-hidden {
+.visually_hidden {
   margin-top: 0;
   margin-bottom: 0;
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  border: 0;
+  clip: rect(0 0 0 0);
+  overflow: hidden;
 }
 
 input.email {
   background-color: rgba(242, 242, 242);
+}
+
+.subscription {
+  min-width: 806px;
+  height: 60px;
+}
+
+.email {
+  background: #F2F2F2;
+  border-radius: 0px 10px 10px 0px;
+  width: 600px;
+  height: inherit;
+  margin: 0;
+  padding: 0;
 }
 
 /*СТИЛИ ХЕДЕР*/
@@ -123,37 +154,47 @@ input.email {
   display: flex;
 }
 
-.header-logo {
+.header_logo {
   margin-right: 30px;
   margin-left: 70px;
-  margin-bottom: 0;
+  margin-bottom: -5px;
+  z-index: 10;
+}
+
+.header_logo_img {
+  display: block;
 }
 
 .nav_menu_list {
   display: flex;
   flex-direction: row;
-  margin-top: 20px;
-  margin-bottom: 20px;
-  padding: 0;
-  min-width: 500px;
+  align-items: center;
+  margin-top: 0px;
+  margin-bottom: 0px;
   margin-left: 17px;
   margin-right: auto;
+  padding: 0;
+  min-width: 500px;
   list-style: none;
   flex-wrap: wrap;
   text-decoration: none;
 }
 
 .nav_menu_custom_list {
-  min-width: 300px;
+  min-width: 270px;
   margin: 0;
+  margin-right: 70px;
+  justify-content: space-between;
 }
 
-.nav_menu_item {
+.nav_menu_item:not(:last-child) {
   margin: 0;
   margin-right: 34px;
+  min-width: 42px;
 }
 
 .nav_menu_item a {
+  display: block;
   font-size: 20px;
   font-weight: 700;
   line-height: 26px;
@@ -162,8 +203,12 @@ input.email {
   color: inherit;
 }
 
+li.nav_menu_item.favorite {
+  margin-right: 20px;
+}
+
 /*СТИЛИ MAIN (INDEX)*/
-.main-container {
+.main_container {
   margin: 0 auto;
 }
 
@@ -173,15 +218,15 @@ input.email {
   padding: 51px 371px 82px;
 }
 
-.wrap-mountains {
+.wrap_mountains {
   background-color: rgb(130, 179, 211);
   background-image: url("../images/decorative/index-main-background-ortimized.jpg");
   background-repeat: no-repeat;
 }
 
 .index_main_header {
-  padding-top: 63px;
-  padding-bottom: 90px;
+  margin-top: 63px;
+  margin-bottom: 90px;
 }
 
 .welcome_h2{
@@ -201,7 +246,7 @@ input.email {
 }
 
 .big_block_content {
-  width: 400px;
+  min-width: 400px;
   padding: 92px 85px;
 }
 
@@ -212,6 +257,7 @@ input.email {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
+  list-style-type: none;
 }
 
 .advantages_list_additional {
@@ -219,6 +265,7 @@ input.email {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
+  list-style-type: none;
 }
 
 .advantages_item {
@@ -272,13 +319,13 @@ li.advantages_item:nth-child(n+3):not(.advantages_item_additional) {
 }
 
 .interested {
-  padding: 91px 0px 93px;
+  margin: 91px 0px 93px;
 }
 
 .subscription_block {
   color: rgb(255, 255, 255);
   background-image: url("../images/decorative/subscription-background.png");
-  padding: 92px 200px;
+  padding: 94px 200px;
   background-color: rgba(131, 179, 211, 0.2);
   ;
 }
@@ -294,8 +341,16 @@ li.advantages_item:nth-child(n+3):not(.advantages_item_additional) {
 .footer_social_list {
   width: 116px;
   margin: 0;
+  list-style-type: none;
+  flex-wrap: wrap;
   margin-right: 52px;
   padding-left: 72px; /*возможно замена на margin при добавлении иконок*/
+}
+
+.footer_social_item {
+  min-width: 24px;
+  margin-right: 26px;
+  flex-wrap: wrap;
 }
 
 .footer_contact {
@@ -306,21 +361,11 @@ li.advantages_item:nth-child(n+3):not(.advantages_item_additional) {
 }
 
 .footer_logo {
-  padding-right: 72px;
+  margin-right: 72px;
+  display: block;
 }
 
 /*СТИЛИ КАТАЛОГА*/
-
-.catalog_container {
-  width: 1200px;
-  margin-left: auto;
-  margin-right: auto;
-  display: flex;
-  flex-direction: column;
-  flex-grow: 1; /*Проверить*/
-  min-height: 100%;
-  background-color: rgba(255, 255, 255);
-}
 
 .catalog_main_header {
   width: inherit;
@@ -334,6 +379,13 @@ li.advantages_item:nth-child(n+3):not(.advantages_item_additional) {
 
 .breadcrumbs {
   margin: 0;
+  list-style-type: none;
+  margin-bottom: 40px;
+}
+
+.breadcrumbs_item {
+  min-width: 12px;
+  margin-right: 10px;
 }
 
 .breadcrumbs_link {
@@ -347,42 +399,42 @@ li.advantages_item:nth-child(n+3):not(.advantages_item_additional) {
 
 .catalog_filters {
   display: flex;
+  justify-content: space-between;
+  gap: 70px;
 }
 
 .infrastructure_filter {
   max-width: 150px;
   padding: 0;
-  margin-right: 70px;
+  /*margin-right: 70px;*/
 }
 
 .housing_filter {
   max-width: 150px;
   padding: 0;
-  margin-right: 167px;
+  /*margin-right: 167px;*/
 }
 
 .cost_filter {
   width: 288px;
-  margin-right: 70px;
+  /*margin-right: 70px;*/
 }
 
 .filter_buttons {
   display: flex;
   flex-direction: column;
+  justify-content: center;
 }
 
 .catalog_filter_list {
   margin: 0;
   padding: 0;
-}
-
-.catalog_view_button,
-.pagination_link {
-  text-decoration: none;
+  list-style-type: none;
 }
 
 .sorting_contaner {
   display: flex;
+  justify-content: space-between;
   margin: 50px 71px 57px 72px;
   width: 1057px;
 }
@@ -390,13 +442,29 @@ li.advantages_item:nth-child(n+3):not(.advantages_item_additional) {
 .sorting_header {
   margin: 0;
   max-width: 338px;
-  margin-right: 191px;
+  /*margin-right: 191px;*/
+}
+
+.catalog_view_buttons {
+  min-width: 160px;
+  padding: 17px 16px;
+  margin-left: 8px;
+  box-sizing: border-box;
+}
+
+.catalog_view_button {
+  min-width: 48px;
+}
+
+.catalog_view_button,
+.pagination_link {
+  text-decoration: none;
 }
 
 .cards_container {
   display: flex;
   flex-wrap: wrap;
-  max-width: 1057px;
+  max-width: 1060px;
   margin: 0 auto;
   justify-content: space-between;
 }
@@ -405,18 +473,26 @@ li.advantages_item:nth-child(n+3):not(.advantages_item_additional) {
   min-width: 341px;
   display: flex;
   flex-direction: column;
-}
-
-.hotel_card:not(:nth-child(n+2)) {
   margin-right: 18px;
+  box-sizing: border-box;
+  padding: 20px;
+}
+
+.hotel_card:nth-child(3n) {
+  margin-right: 0;
 }
 
 .hotels_card_link {
+  display: flex;
+  flex-direction: column;
   text-decoration: none;
+  align-items: center;
+  color: inherit;
 }
 
-.hotels_card_link {
-  color: inherit;
+.hotels_card_link>h3 {
+  min-width: 300px;
+  margin: 16px 0;
 }
 
 .catalog_img {
@@ -426,11 +502,21 @@ li.advantages_item:nth-child(n+3):not(.advantages_item_additional) {
 .rating {
   background-color: rgba(242, 242, 242);
   text-transform: uppercase;
+  min-width: 160px;
 }
 
 .counter {
   color: rgb(255, 255, 255);
   background-color: rgba(125, 181, 79, 1);
+}
+
+.paggination {
+  display: flex;
+  min-width: 370px;
+  justify-content: space-between;
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
 }
 
 .pagination_item a {
@@ -443,17 +529,19 @@ li.advantages_item:nth-child(n+3):not(.advantages_item_additional) {
   color: rgb(255, 255, 255);
 }
 
+.pagination_item:not(:last-child) {
+  margin-right: 8px;
+}
+
 .pagination_link.pagination_current {
   background-color: rgba(242, 242, 242);
   color: rgb(0, 0, 0);
 }
 
-.paggination {
-  display: flex;
-  width: 370px;
-  justify-content: space-between;
-  margin: 0;
-  padding: 0;
+.pagination_link {
+  display: block;
+  box-sizing: border-box;
+  min-width: 55px;
 }
 
 .catalog_main_footer {
@@ -526,6 +614,10 @@ li.advantages_item:nth-child(n+3):not(.advantages_item_additional) {
 font-size: 20px;
 line-height: 36px;
 background-color: rgba(130, 179, 211);
+width: 200px;
+height: 60px;
+margin: 0;
+padding: 0;
 }
 
 .social_button {
