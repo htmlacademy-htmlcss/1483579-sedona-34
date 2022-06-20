@@ -133,18 +133,20 @@ legend {
 
 input.email {
   background-color: rgba(242, 242, 242);
+  border: none;
+  padding-top: 23px;
+  padding-bottom: 23px;
 }
 
 .subscription {
   min-width: 806px;
-  height: 60px;
+  margin-top: 46px;
 }
 
 .email {
   background: #F2F2F2;
-  border-radius: 0px 10px 10px 0px;
+  border-radius: 10px 0px 0px 10px;
   width: 600px;
-  height: inherit;
   margin: 0;
   padding: 0;
 }
@@ -248,6 +250,7 @@ li.nav_menu_item.favorite {
 .big_block_content {
   min-width: 400px;
   padding: 92px 85px;
+  box-sizing: border-box;
 }
 
 .advantages_list {
@@ -327,7 +330,7 @@ li.advantages_item:nth-child(n+3):not(.advantages_item_additional) {
   background-image: url("../images/decorative/subscription-background.png");
   padding: 94px 200px;
   background-color: rgba(131, 179, 211, 0.2);
-  ;
+  background-repeat: round;
 }
 
 /*FOOTER СТИЛИ*/
@@ -462,8 +465,9 @@ li.advantages_item:nth-child(n+3):not(.advantages_item_additional) {
 }
 
 .cards_container {
-  display: flex;
-  flex-wrap: wrap;
+  display: grid;
+  grid-template-columns: 340px 340px 340px;
+  gap: 18px;
   max-width: 1060px;
   margin: 0 auto;
   justify-content: space-between;
@@ -473,7 +477,6 @@ li.advantages_item:nth-child(n+3):not(.advantages_item_additional) {
   min-width: 341px;
   display: flex;
   flex-direction: column;
-  margin-right: 18px;
   box-sizing: border-box;
   padding: 20px;
 }
@@ -493,6 +496,20 @@ li.advantages_item:nth-child(n+3):not(.advantages_item_additional) {
 .hotels_card_link>h3 {
   min-width: 300px;
   margin: 16px 0;
+  text-align: start;
+}
+
+.card-description,
+.cards_buttons,
+.stars_rating {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 16px;
+}
+
+.card_description_content {
+  text-align: start;
+  width: 140px;
 }
 
 .catalog_img {
@@ -503,6 +520,8 @@ li.advantages_item:nth-child(n+3):not(.advantages_item_additional) {
   background-color: rgba(242, 242, 242);
   text-transform: uppercase;
   min-width: 160px;
+  padding: 9px 22px;
+  text-align: center;
 }
 
 .counter {
@@ -579,11 +598,14 @@ li.advantages_item:nth-child(n+3):not(.advantages_item_additional) {
 
 .main_button {
   background-color: rgba(117, 97, 87);
-  padding: 9px, 15px, 8px;
+  padding: 9px 15px;
+  box-sizing: border-box;
 }
 
 .additional_button {
   background-color: rgba(130, 179, 211);
+  padding: 9px 15px;
+  box-sizing: border-box;
 }
 
 .additional_button:first-child {
@@ -592,6 +614,8 @@ li.advantages_item:nth-child(n+3):not(.advantages_item_additional) {
 
 .button_favorite {
   background: rgba(125, 181, 79);
+  padding: 9px 15px;
+  box-sizing: border-box;
 }
 
 .reset_button{
@@ -615,9 +639,11 @@ font-size: 20px;
 line-height: 36px;
 background-color: rgba(130, 179, 211);
 width: 200px;
-height: 60px;
 margin: 0;
-padding: 0;
+padding: 12px 15px;
+border: none;
+vertical-align: bottom;
+border-radius: 0px 10px 10px 0px;
 }
 
 .social_button {
