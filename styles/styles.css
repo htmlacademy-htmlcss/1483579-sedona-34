@@ -90,7 +90,7 @@ legend {
   font-weight: 700;
   line-height: 26px;
   text-align: left;
-  margin-bottom: 30px;
+  margin-bottom: 34px;
 }
 
 /*ОБЩИЕ СТИЛИ*/
@@ -211,6 +211,11 @@ legend {
 .nav_menu_item:not(:last-child) {
   margin: 0;
   margin-right: 34px;
+  /*min-width: 40px;*/
+}
+
+.nav_menu_custom_list li.nav_menu_item:not(:last-child) {
+  margin: auto;
 }
 
 .nav_menu_item a {
@@ -228,6 +233,7 @@ legend {
 
 .nav_menu_custom_list .nav_menu_item:last-child {
   min-width: 160px;
+  margin-left: 20px;
 }
 
 .nav_menu_custom_list .nav_menu_item:last-child a {
@@ -506,6 +512,16 @@ li.advantages_item:nth-child(n+3):not(.advantages_item_additional) {
   background-image: url("../images/decorative/catalog-background.jpg");
   padding: 35px 70px 70px;
   color: rgb(255, 255, 255);
+  box-sizing: border-box;
+  background-size: cover;
+  background-position: 50%;
+}
+
+.infrastructure_filter,
+.housing_filter {
+  border: none;
+  padding: 0;
+  margin: 0;
 }
 
 .breadcrumbs {
@@ -514,6 +530,7 @@ li.advantages_item:nth-child(n+3):not(.advantages_item_additional) {
   padding: 0;
   list-style-type: none;
   margin-bottom: 40px;
+  position: relative;
 }
 
 .breadcrumbs_item {
@@ -537,6 +554,19 @@ li.advantages_item:nth-child(n+3):not(.advantages_item_additional) {
   fill: rgb(255, 255, 255);
 }
 
+.breadcrumbs_item:not(:last-child)::after {
+  content: "";
+  background-image: url(../images/icons/arrow_optimazed.svg);
+  position: absolute;
+  width: 5px;
+  height: 8px;
+  background-position: center;
+  background-repeat: no-repeat;  
+  display: inline-block;
+  top: 9px;
+  left: 26px;
+} 
+
 .current_bc {
   margin-left: 10px;
 }
@@ -549,7 +579,6 @@ li.advantages_item:nth-child(n+3):not(.advantages_item_additional) {
 
 .infrastructure_filter {
   max-width: 150px;
-  padding: 0;
 }
 
 .housing_filter {
@@ -557,14 +586,142 @@ li.advantages_item:nth-child(n+3):not(.advantages_item_additional) {
   padding: 0;
 }
 
-.cost_filter {
+.control_mark {
+  position: absolute;
+  top: 2p0x;
+  left: 0;
+  width: 20px;
+  height: 20px;
+  border: none;
+  background-color: rgb(255,255,255);
+  border-radius: 3px;
+}
+
+.living_filter{
+  border-radius: 50%;
+}
+
+.control {
+  position: relative;
+  display: block;
+  padding-left: 36px;
+  margin-bottom: 15px;
+}
+
+.control_input[type="checkbox"]:checked + .control_mark::before {
+  content: "";
+  background-image: url("../images/icons/tick_optimazed.svg");
+  width: 12px;
+  height: 10px;
+  position: absolute;
+  background-position: center;
+  background-repeat: no-repeat;  
+  top: 6px;
+  right: 3px;
+}
+
+.control_input[type="radio"]:checked + .living_filter::before {
+  content: "";
+  background-color: rgb(63, 94, 114);
+  width: 10px;
+  height: 10px;
+  position: absolute;
+  background-position: center;
+  background-repeat: no-repeat;  
+  border-radius: 50%;
+  top: 5px;
+  right: 5px;
+}
+
+.cost_fieldset {
   width: 288px;
+  border: none;
+}
+
+.filter_buttons_wrapper {
+  display: flex;
+  padding: 0;
+}
+
+.filter_buttons_wrapper label{
+  position: relative;
+}
+
+.filter_from {
+  border-radius: 5px 0 0 5px;
+}
+
+.filter_to {
+  border-left: none;
+  border-top-right-radius: 5px;
+  border-bottom-right-radius: 5px;
+}
+
+
+input.cost_filter {
+  width: 144px;
+  padding: 14px 20px;
+  font: inherit;
+  text-align: left;
+  color: rgb(255,255,255);
+  background: transparent;
+  appearance: textfield;
+  border: 2px solid rgb(255, 255, 255);
+  box-sizing: border-box;
+}
+
+input.cost_filter::-webkit-outer-spin-button,
+input.cost_filter::-webkit-inner-spin-button {
+  appearance: none;
+  margin: 0;
+}
+
+.minimum,
+.maximum {
+  position:absolute;
+  top: 15px;
+  right: 14px;
+  color: rgb(255, 255, 255, 0.3);
+}
+
+.range_scale {
+  position: relative;
+  height: 4px;
+  background-color: rgba(255, 255, 255, 0.3);
+  margin-top: 32px;
+  margin-bottom: 8px;
+}
+
+.range-bar {
+  position: absolute;
+  background-color: rgb(255, 255, 255);
+  height: 4px;
+
+}
+
+.range_button {
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  background: #ffffff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transform: translateY(-50%);
+}
+
+.min_button {
+  left: 0;
+}
+
+.max_button {
+left: 218px;
 }
 
 .filter_buttons {
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: flex-end;
 }
 
 .catalog_filter_list {
@@ -816,6 +973,183 @@ li.advantages_item:nth-child(n+3):not(.advantages_item_additional) {
   background-color: rgb(255, 255, 255);
 }
 
+/*МОДАЛКА*/
+.modal_container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  display: flex;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(242, 242, 242, 0.8);
+  visibility: hidden;
+}
+
+.modal {
+  position: relative;
+  margin: auto;
+  padding: 62px 70px 70px;
+  background-color: rgb(255, 255, 255);
+  box-shadow: 0px 25px 50px rgba(0, 0, 0, 0.15);
+  border-radius: 30px;
+  box-sizing: border-box;
+}
+
+.modal_hotel_search {
+  width: 716px;
+}
+
+.modal_close_button {
+  position: absolute;
+  padding: 0;
+  top: 54px;
+  right: 70px;
+  width: 53px;
+  height: 53px;
+  background-color: rgb(242, 242, 242);
+  border: none;
+  border-radius: 50%;
+  cursor: pointer;  
+}
+
+.modal_title {
+  margin: 0;
+  margin-bottom: 63px;
+  font-family: inherit;
+  font-weight: 700;
+  font-size: 30px;
+  line-height: 36px;
+  text-align: start;
+}
+
+.modal_content {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+}
+
+.modal_lable {
+  display: flex;
+  margin-bottom: 40px;
+  align-items: center;
+}
+
+.checkin_day {
+  min-width: 112px;
+  margin-right: 42px;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 26px;
+}
+
+.checkin_label {
+  position: relative;
+}
+
+input.checkin_input::after {
+  position: absolute;
+  content: "Мы не можем отправить вас в прошлое.";
+  color: rgb(255, 87, 87);
+  background-color: aqua;
+  display: inline-block;
+  width: 100px;
+  height: 20px;
+}
+
+.modal_input {
+  min-width: 420px;
+  padding: 14px 36px 14px 20px;
+  border-radius: 4px;
+  background-color: rgb(242, 242, 242);
+  border: none;
+  box-sizing: border-box;
+}
+
+.checkout_day {
+  min-width: 118px;
+  margin-right: 36px;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 26px;
+}
+
+.adults_numb {
+  min-width: 90px;
+  margin-right: 64px;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 26px;
+}
+
+.visitors_input {
+  min-width: 20px;
+  padding: 12px 20px;
+  border-radius: 0px;
+  text-align: center;
+}
+
+.children_numb {
+  min-width: 54px;
+  margin-right: 42px;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 26px;
+}
+
+.visitors_num {
+  display: flex;
+  justify-content: space-between;
+}
+
+.visitors_input::-webkit-outer-spin-button,
+.visitors_input::-webkit-inner-spin-button {
+  appearance: none;
+  margin: 0;
+}
+
+.modal_button_container {
+  width: 134px;
+  display: flex;
+}
+
+.modal_minus,
+.modal_plus {
+  background-color: rgb(242, 242, 242);
+  border: none;
+  box-sizing: border-box;
+  min-width: 30px;
+  height: 42px;
+}
+
+.modal_minus {
+  border-top-left-radius: 4px;
+  border-bottom-left-radius: 4px;
+}
+
+.modal_plus {
+  border-top-right-radius: 4px;
+  border-bottom-right-radius: 4px;
+}
+
+button.modal_serach_button {
+  min-width: 574px;
+  height: 60px;
+  padding: 12px 26px;
+  font-family: inherit;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 36px;
+  color: rgb(255, 255, 255);
+  background-color: rgba(130, 179, 211);
+}
+
+
+
 /*КНОПКИ*/
 
 .button { /*Основная кнопка*/
@@ -845,7 +1179,6 @@ li.advantages_item:nth-child(n+3):not(.advantages_item_additional) {
 .additional_button {
   background-color: rgba(130, 179, 211);
   padding: 9px 15px;
-  box-sizing: border-box;
 
   grid-row: 4;
   grid-column: 2;
@@ -853,6 +1186,7 @@ li.advantages_item:nth-child(n+3):not(.advantages_item_additional) {
 
 .additional_button:first-child {
   width: 161px;
+  padding: 14px 15px;
 }
 
 .button_favorite {
@@ -1092,4 +1426,17 @@ border-radius: 0px 10px 10px 0px;
 
 .card_link_title:active .middle_title {
   color: rgba(117, 97, 87, 0.3);
+}
+
+.email:hover {
+  background-color: rgb(230, 230, 230);
+}
+
+.email:focus {
+  border: 3px solid rgb(131, 179, 211);
+}
+
+.subscription:active .email { /*То ли это состояние???*/
+  border: 2px solid rgb(0, 0, 0);
+  background-color: rgb(255, 255, 255);
 }
