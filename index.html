@@ -164,6 +164,52 @@
           </a>
         </div>
       </footer>
+      <!--MODAL-->
+
+      <div class="modal_container">
+        <div class="modal modal_hotel_search"> 
+          <button class="modal_close_button">
+            <span class="visually_hidden">Кнопка закрыть</span>
+            <svg class="modal_close_icon" aria-hidden="true" focusable="false"  width="13" height="13" viewBox="0 0 13 13" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M13 1.2 11.8 0 6.5 5.3 1.2 0 0 1.2l5.3 5.3L0 11.8 1.2 13l5.3-5.3 5.3 5.3 1.2-1.2-5.3-5.3L13 1.2Z" fill="#000">
+            </svg>
+          </button> 
+          <section class="modal_content">
+            <h2 class="modal_title">Поиск гостиницы в Седоне</h2>
+            <form class="search_form" action="https://echo.htmlacademy.ru/" method="post">
+              <label class="modal_lable checkin_lable">
+                <span class="checkin_day">Дата заезда:</span>
+                <input class="modal_input checkin_input" type="text" placeholder="27 апреля 2020" name="checkin_day">
+              </label>
+              <label class="modal_lable checkout_lable">
+                <span class="checkout_day">Дата выезда:</span>
+                <input class="modal_input" type="text" placeholder="1 сентября 2021" name="checkout_day">
+              </label>
+              <div class="visitors_num">
+                <label class="modal_lable adults_lable">
+                  <span class="adults_numb">Взрослые:</span>
+                  <div class="modal_button_container">  
+                    <input class="modal_minus" type="button" value="-" name="minus">
+                    <input class="modal_input visitors_input"type="number" placeholder="2" name="adults_number">
+                    <input class="modal_plus" type="button" value="+" name="plus">
+                  </div>
+                </label>
+                <label class="modal_lable children_lable">
+                  <span class="children_numb">Дети:</span>
+                  <div class="modal_button_container">
+                    <input class="modal_minus" type="button" value="-" name="minus">
+                    <input class="modal_input visitors_input"type="number" placeholder="1" name="children_number">
+                    <input class="modal_plus" type="button" value="+" name="plus">
+                  </div>
+                </label>
+              </div>
+              <button class="button modal_serach_button" type="button" value="Найти">
+                Найти
+              </button>
+            </form>
+         </section>
+        </div>
+      </div>
     </div>
   </body>
 </html>
