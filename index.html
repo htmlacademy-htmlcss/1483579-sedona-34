@@ -14,7 +14,7 @@
           </a>
           <ul class="nav_menu_list">
             <li class="nav_menu_item">
-              <a class="nav_menu_link index_current_page" href="index.html">Главная</a>
+              <a class="nav_menu_link current_page" href="index.html">Главная</a>
             </li>
             <li class="nav_menu_item">
               <a class="nav_menu_link" href="#">О Седоне</a>
@@ -42,7 +42,7 @@
               </a>
             </li>
             <li class="nav_menu_item button">
-              <a class="button main_button" href="#">Хочу сюда</a>
+              <a class="button main_button" href="#popap">Хочу сюда</a>
             </li>
           </ul>
         </nav>
@@ -90,7 +90,7 @@
                   <span class="advantage_number">— №2 —</span>
                   <span>Да, по нему можно пройти! Если вы осмелитесь, разумеется</span>
                 </div>
-                <img src="images/index-context/devil-bridge-optimized.jpg" width="800px" height="384px" alt="Фото моста.">
+                <img class="devil_bridge_img" src="images/index-context/devil-bridge-optimized.jpg" width="800px" height="384px" alt="Фото моста.">
               </div>
             </li>
             <li class="advantages_item even_advantage_block">
@@ -110,14 +110,14 @@
             </li>
           </ol>
           <section class="interested">
-            <h2>Заинтересовались?</h2>
+            <h2 id="popap">Заинтересовались?</h2>
             <p class="best_option">Укажите предполагаемые даты поездки, и мы покажем вам лучшие предложения гостиниц в&nbsp;Седоне</p>
             <div class="hotel_serach">
-              <a class="button main_big_button" href="">ПОИСК ГОСТИНИЦЫ В СЕДОНЕ</a>
+              <button class="button main_big_button" type=button onclick="document.querySelector('.modal_container').classList.remove('modal_close_container')">Поиск гостинницы в Седоне</button>
             </div> <!--попап-форма!!!-->
           </section>
           <section class="subscription_block">
-            <h2>Подпишитесь на рассылку</h2>
+            <h2 class="subscription_title">Подпишитесь на рассылку</h2>
             <p class="useful_info">Только полезная информация и никакого спама, честное бойскаутское!</p>
             <form class="subscription" action="https://echo.htmlacademy.ru/" method="post">
               <input class="email" type="email" placeholder="Ваш e-mail" name="subscription_email" required>
@@ -166,36 +166,44 @@
       </footer>
       <!--MODAL-->
 
-      <div class="modal_container">
+      <div class="modal_container modal_close_container">
         <div class="modal modal_hotel_search"> 
-          <button class="modal_close_button">
+          <button class="modal_close_button" type="button" onclick="document.querySelector('.modal_container').classList.add('modal_close_container')" >
             <span class="visually_hidden">Кнопка закрыть</span>
             <svg class="modal_close_icon" aria-hidden="true" focusable="false"  width="13" height="13" viewBox="0 0 13 13" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <path d="M13 1.2 11.8 0 6.5 5.3 1.2 0 0 1.2l5.3 5.3L0 11.8 1.2 13l5.3-5.3 5.3 5.3 1.2-1.2-5.3-5.3L13 1.2Z" fill="#000">
+              <path d="M13 1.2 11.8 0 6.5 5.3 1.2 0 0 1.2l5.3 5.3L0 11.8 1.2 13l5.3-5.3 5.3 5.3 1.2-1.2-5.3-5.3L13 1.2Z">
             </svg>
           </button> 
           <section class="modal_content">
             <h2 class="modal_title">Поиск гостиницы в Седоне</h2>
-            <form class="search_form" action="https://echo.htmlacademy.ru/" method="post">
-              <label class="modal_lable checkin_lable">
+            <form class="search_form" action="https://echo.htmlacademy.ru/" method="get">
+              <label class="modal_label checkin_label">
                 <span class="checkin_day">Дата заезда:</span>
                 <input class="modal_input checkin_input" type="text" placeholder="27 апреля 2020" name="checkin_day">
+                <div class="check_icon"></div>
               </label>
-              <label class="modal_lable checkout_lable">
+              <div class="checkin_error">Мы не можем отправить вас в прошлое.</div>
+              <label class="modal_label checkout_label">
                 <span class="checkout_day">Дата выезда:</span>
                 <input class="modal_input" type="text" placeholder="1 сентября 2021" name="checkout_day">
+                <div class="check_icon"></div>
               </label>
+              <div class="checkout_error">На эти даты есть свободные номера. Пока есть.</div>
               <div class="visitors_num">
-                <label class="modal_lable adults_lable">
+                <label class="modal_label adults_label">
                   <span class="adults_numb">Взрослые:</span>
                   <div class="modal_button_container">  
-                    <input class="modal_minus" type="button" value="-" name="minus">
+                    <button class="modal_minus" type="button"></button>
                     <input class="modal_input visitors_input"type="number" placeholder="2" name="adults_number">
-                    <input class="modal_plus" type="button" value="+" name="plus">
+                    <button class="modal_plus" type="button"></button>
                   </div>
                 </label>
-                <label class="modal_lable children_lable">
-                  <span class="children_numb">Дети:</span>
+                <label class="modal_label children_label">
+                  <span class="children_numb">Дети: </span>
+                  <div class="iformation_icon"></div>
+                  <div class="tooltip_container">
+                    Укажите количество детей, которые будут с вами, возраст которых от 6 до 18 лет. Дети до 6 лет размещаются бесплатно.
+                  </div>
                   <div class="modal_button_container">
                     <input class="modal_minus" type="button" value="-" name="minus">
                     <input class="modal_input visitors_input"type="number" placeholder="1" name="children_number">
