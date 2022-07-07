@@ -43,7 +43,7 @@
               </a>
             </li>
             <li class="nav_menu_item button">
-              <a class="button main_button" href="#" onclick="document.querySelector('.modal_container').classList.remove('modal_close_container')">Хочу сюда</a>
+              <a class="button main_button last_child" href="#" onclick="document.querySelector('.modal_container').classList.remove('modal_close_container')">Хочу сюда</a>
             </li>
           </ul>
         </nav>
@@ -65,7 +65,7 @@
             </li>
           </ol>
           <section>
-            <h2 class="visually_hidden">Список фильтров</h2>
+            <h2 class="visually_hidden h2">Список фильтров</h2>
             <form class="catalog_filters" action="https://echo.htmlacademy.ru/" method="get">
               <div class="left_filters_wrap">
                 <fieldset class="infrastructure_filter">
@@ -75,7 +75,7 @@
                       <div class="control">
                         <input class="visually_hidden control_input" type="checkbox" name="pool" tabindex="-1" checked>
                         <span class="control_mark" tabindex="0"></span>
-                        <labek>Бассейн</labek>
+                        <label>Бассейн</label>
                       </div>
                     </li>
                     <li>
@@ -151,7 +151,7 @@
           </section>
         </div>
         <div class="sorting_contaner">
-          <h2 class="sorting_header">Найдено гостиниц: 38</h2>
+          <h2 class="sorting_header h2">Найдено гостиниц: 38</h2>
           <div class="select">
             <select class="select_control" aria-label="Сортировка">
               <option value="cheap">Сначала дешёвые</option>
@@ -283,8 +283,8 @@
           </label>
         </div>
         <section class="catalog_subscription_block">
-          <h2 class="catalog_subscription_title">Подпишитесь на&nbsp;рассылку</h2>
-          <p>Только полезная информация и&nbsp;никакого спама, <br>честное бойскаутское!</p>
+          <h2 class="catalog_subscription_title h2">Подпишитесь на&nbsp;рассылку</h2>
+          <p class="p">Только полезная информация и&nbsp;никакого спама, <br>честное бойскаутское!</p>
           <form class="subscription catalog_subscription" action="https://echo.htmlacademy.ru/"   method="post" >
             <label class="visually_hidden" for="newsletter-email">Email</label>
             <input class="email" id="newsletter-email" type="email" value="Ваш e-mail" placeholder="моя@почта" name="subscription_email" required>
@@ -340,7 +340,7 @@
             </svg>
           </button> 
           <section class="modal_content">
-            <h2 class="modal_title">Поиск гостиницы в Седоне</h2>
+            <h2 class="modal_title h2">Поиск гостиницы в Седоне</h2>
             <form class="search_form" action="https://echo.htmlacademy.ru/" method="get">
               <label class="modal_label checkin_label">
                 <span class="checkin_day">Дата Заезда:</span>
