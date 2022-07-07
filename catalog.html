@@ -4,7 +4,7 @@
     <meta charset="utf-8">
     <title>Гоcтиницы</title>
     <link rel="stylesheet" href="styles/styles.css">
-    <link rel="icon" type="image/png" sizes="32x32" href="../1483579-sedona-34/images/icons/favicon.png">
+    <link rel="icon" href="favicon.ico">
   </head>
   <body>
     <div class="container">
@@ -69,14 +69,14 @@
             <form class="catalog_filters" action="https://echo.htmlacademy.ru/" method="get">
               <div class="left_filters_wrap">
                 <fieldset class="infrastructure_filter">
-                  <legend>Инфраструктура:</legend>
+                  <legend class="legend">Инфраструктура:</legend>
                   <ul class="catalog_filter_list">
                     <li>
-                      <label class="control">
+                      <div class="control">
                         <input class="visually_hidden control_input" type="checkbox" name="pool" tabindex="-1" checked>
                         <span class="control_mark" tabindex="0"></span>
-                        <span>Бассейн</span>
-                      </label>
+                        <labek>Бассейн</labek>
+                      </div>
                     </li>
                     <li>
                       <label class="control">
@@ -95,7 +95,7 @@
                   </ul>
                 </fieldset>
                 <fieldset class="housing_filter">
-                  <legend>Тип жилья:</legend>
+                  <legend class="legend">Тип жилья:</legend>
                     <ul class="catalog_filter_list">
                       <li>
                         <label class="control">
@@ -123,7 +123,7 @@
               </div>
               <div class="right_filters_wrap">
                 <fieldset class="cost_fieldset">
-                  <legend>Стоимость, ₽:</legend>
+                  <legend class="legend">Стоимость, ₽:</legend>
                   <div class="filter_buttons_wrapper">  
                     <input class="cost_filter filter_from" id="from" type="number" value="0" name="min_cost">
                     <label class="minimum" for="from">от</label>
@@ -284,9 +284,10 @@
         </div>
         <section class="catalog_subscription_block">
           <h2 class="catalog_subscription_title">Подпишитесь на&nbsp;рассылку</h2>
-          <p>Только полезная информация и&nbsp;никакого спама, честное бойскаутское!</p>
+          <p>Только полезная информация и&nbsp;никакого спама, <br>честное бойскаутское!</p>
           <form class="subscription catalog_subscription" action="https://echo.htmlacademy.ru/"   method="post" >
-            <input class="email" type="email" value="Ваш e-mail" placeholder="моя@почта" name="subscription_email" required>
+            <label class="visually_hidden" for="newsletter-email">Email</label>
+            <input class="email" id="newsletter-email" type="email" value="Ваш e-mail" placeholder="моя@почта" name="subscription_email" required>
             <input class="button additional_big_button" type="submit" value="Подписаться" name="subscription_button">
           </form>
         </section>
@@ -343,13 +344,13 @@
             <form class="search_form" action="https://echo.htmlacademy.ru/" method="get">
               <label class="modal_label checkin_label">
                 <span class="checkin_day">Дата Заезда:</span>
-                <input class="modal_input" type="text" placeholder="27 апреля 2020" name="checkin_day">
+                <input class="modal_input" type="text" placeholder="27 апреля 2020" name="checkin_day" required>
                 <span class="check_icon"></span>
               </label>
               <div class="checkin_error">Мы не можем отправить вас в прошлое.</div>
               <label class="modal_label checkout_label">
                 <span class="checkout_day">Дата Выезда:</span>
-                <input class="modal_input" type="text" placeholder="1 сентября 2021" name="checkout_day">
+                <input class="modal_input" type="text" placeholder="1 сентября 2021" name="checkout_day" required>
                 <span class="check_icon"></span>
               </label>
               <div class="checkout_error">На эти даты есть свободные номера. Пока есть.</div>
