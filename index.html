@@ -4,7 +4,7 @@
     <meta charset="utf-8">
     <title>HTML Academy: Седона</title>
     <link rel="stylesheet" href="styles/styles.css">
-    <link rel="icon" type="image/png" sizes="32x32" href="../1483579-sedona-34/images/icons/favicon.png">
+    <link rel="icon" href="favicon.ico">
   </head>
   <body>
     <div class="container">
@@ -121,7 +121,8 @@
             <h2 class="subscription_title">Подпишитесь на&nbsp;рассылку</h2>
             <p class="useful_info">Только полезная информация и&nbsp;никакого спама, честное бойскаутское!</p>
             <form class="subscription" action="https://echo.htmlacademy.ru/" method="post">
-              <input class="email" type="email" placeholder="Ваш e-mail" name="subscription_email" required>
+              <label class="visually_hidden" for="newsletter-email">Email</label>
+              <input class="email" id="newsletter-email"type="email" placeholder="Ваш e-mail" name="subscription_email" required>
               <input class="button additional_big_button" type="submit" value="Подписаться" name="subscription_button">
             </form>
           </section>
@@ -179,13 +180,13 @@
             <form class="search_form" action="https://echo.htmlacademy.ru/" method="get">
               <label class="modal_label checkin_label">
                 <span class="checkin_day">Дата Заезда:</span>
-                <input class="modal_input checkin_input" type="text" placeholder="27 апреля 2020" name="checkin_day">
+                <input class="modal_input checkin_input" type="text" placeholder="27 апреля 2020" name="checkin_day" required>
                 <span class="check_icon"></span>
               </label>
               <div class="checkin_error">Мы не можем отправить вас в прошлое.</div>
               <label class="modal_label checkout_label">
                 <span class="checkout_day">Дата Выезда:</span>
-                <input class="modal_input" type="text" placeholder="1 сентября 2021" name="checkout_day">
+                <input class="modal_input" type="text" placeholder="1 сентября 2021" name="checkout_day" required>
                 <span class="check_icon"></span>
               </label>
               <div class="checkout_error">На эти даты есть свободные номера. Пока есть.</div>
