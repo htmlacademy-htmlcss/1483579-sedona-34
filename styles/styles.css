@@ -147,7 +147,7 @@ body {
   margin: 0;
   padding: 0;
   border: none;
-  padding: 20px 22px;
+  padding: 19px 15px;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
 }
@@ -997,6 +997,7 @@ a.current_view {
   gap: 0px 18px;
   max-width: 1060px;
   margin: 0 auto;
+  margin-bottom: 66px;
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
@@ -1227,7 +1228,8 @@ a.current_view {
   margin-left: 75px;
   margin-right: 70px;
   max-width: 1057px;
-  margin-top: 97px;
+  padding-top: 30px;
+  border-top: 1px solid rgba(230, 230, 230, 1);
 }
 
 .guests_number {
@@ -1246,13 +1248,10 @@ a.current_view {
 .catalog_subscription_block {
   color: rgb(0, 0, 0);
   padding: 92px 200px;
-  margin-bottom: 25px;
   background-color: rgb(255, 255, 255);
 }
 
 .catalog_subscription_title{
-  margin: 0;
-  margin-left: 12px;
   margin-bottom: 28px;
 }
 
